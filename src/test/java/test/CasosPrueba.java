@@ -77,9 +77,10 @@ public class CasosPrueba {
 
     @Test
     public void CP005_Buscar_artista_registrado() {
+        String artista= "David Bowie";
         homePage.irABuscar();
-        searchPage.buscar("David Bowie");
+        searchPage.buscar(artista);
         searchPage.irAResutladoPrincipalBusqueda();
-        Assert.assertEquals("David Bowie",artistPage.obtenerArtista());
+        Assert.assertEquals(artista,artistPage.obtenerArtista());
     }
 }
